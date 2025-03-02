@@ -1,6 +1,12 @@
 import Image from 'next/image';
 
-export default function ProjectCard({ project }) {
+interface Project {
+  mainImage: string;
+  title: string;
+  description: string;
+}
+
+export default function ProjectCard({ project }: { project: Project }) {
   return (
     <div className="project-card">
       <Image src={project.mainImage} alt={project.title} width={100} height={100} />

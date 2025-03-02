@@ -1,10 +1,11 @@
 'use client'
 
 import { useState } from 'react'
-import { Dialog, DialogPanel, Transition } from '@headlessui/react'
+import { Dialog, DialogPanel} from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
 import React from 'react'
+import Image from 'next/image'
 
 const navigation = [
   { name: 'Product', href: '/products' },
@@ -26,7 +27,7 @@ export default function Example() {
         <div className="flex items-center gap-x-12">
           <Link href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
-            <img
+            <Image
               alt=""
               src="https://tailwindui.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
               className="h-8 w-auto"
@@ -63,7 +64,7 @@ export default function Example() {
               <div className="flex items-center justify-between">
                 <Link href="/" className="-m-1.5 p-1.5">
                   <span className="sr-only">Your Company</span>
-                  <img
+                  <Image
                     alt=""
                     src="https://tailwindui.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
                     className="h-8 w-auto"

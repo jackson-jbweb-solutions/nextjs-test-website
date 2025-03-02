@@ -1,5 +1,7 @@
 'use client'
 
+import Image from 'next/image'
+
 import { useState } from 'react'
 import {
   Disclosure,
@@ -60,7 +62,7 @@ const product = {
   ],
 }
 
-function classNames(...classes) {
+function classNames(...classes: string[]): string {
   return classes.filter(Boolean).join(' ')
 }
 
@@ -83,7 +85,7 @@ export default function Example() {
                   >
                     <span className="sr-only">{image.name}</span>
                     <span className="absolute inset-0 overflow-hidden rounded-md">
-                      <img alt="" src={image.src} className="size-full object-cover" />
+                      <Image alt="" src={image.src} className="size-full object-cover" />
                     </span>
                     <span
                       aria-hidden="true"
@@ -97,7 +99,7 @@ export default function Example() {
             <TabPanels>
               {product.images.map((image) => (
                 <TabPanel key={image.id}>
-                  <img alt={image.alt} src={image.src} className="aspect-square w-full object-cover sm:rounded-lg" />
+                  <Image alt={image.alt} src={image.src} className="aspect-square w-full object-cover sm:rounded-lg" />
                 </TabPanel>
               ))}
             </TabPanels>

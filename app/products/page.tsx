@@ -23,7 +23,7 @@ export default function ProductsPage() {
     );
 }
 
-function Modal({ open, setOpen }) {
+function Modal({ open, setOpen }: { open: boolean; setOpen: (open: boolean) => void }) {
     return (
         <Dialog open={open} onClose={setOpen} className="relative z-10">
             <DialogBackdrop
